@@ -24,12 +24,17 @@ namespace GunSceneReenabler
         internal void Update()
         {
             Scene scene = SceneManager.GetActiveScene();
-            if (Input.GetKeyDown(load_key.Value))
+            if (load_key.Value != "")
             {
-                SceneManager.UnloadScene(scene); //unity's mad but we need to do this I'm pretty sure other the game just throws up errors like me after christmas eve (NOT GOOD!)
-                SceneManager.LoadScene("GunExplosionScene");
+                if (Input.GetKeyDown(load_key.Value))
+                {
+                    SceneManager.UnloadSceneAsync(scene); //unity's mad but we need to do this I'm pretty sure otherwise the game just throws up errors like me after christmas eve (NOT GOOD!)
+                    SceneManager.UnloadSceneAsync("Receiver2BaseScene"); //unity's mad but we need to do this I'm pretty sure otherwise the game just throws up errors like me after christmas eve (NOT GOOD!)
+                    SceneManager.LoadScene("GunExplosionScene");
+                }
             }
             // Get build scenes
+            /*
             var sceneNumber = SceneManager.sceneCountInBuildSettings;
             string[] arrayOfNames;
             arrayOfNames = new string[sceneNumber];
@@ -43,7 +48,7 @@ namespace GunSceneReenabler
                 {
                   Debug.Log(name);
                 }
-            }
+            }*/
         }
     }
 }
