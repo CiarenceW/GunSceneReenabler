@@ -17,5 +17,5 @@ Adds a method to access the Gun Dissasembly View scene in Receiver 2
  ## KNOWN ISSUES
  - Throws an error when you quit back to the splash screen, doesn't affect anything AFAIK (UMP Related)
  - You can't re-assemble the cool gun
- - You have to press "**1**" six times after the cool gun before anything showing up, that's normal, blame Wolfire for still not having released the guns >:(
+ - You have to press "**1**" six times after the cool gun before anything else shows up, that's normal, blame Wolfire for still not having released the guns >:(
  - None of the guns have magazines, might be able to fix that, I'll see
