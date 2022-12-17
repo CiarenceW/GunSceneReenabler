@@ -19,7 +19,7 @@ namespace GunSceneReenabler
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
-            load_key = Config.Bind("Manual Activation", "Activate manually, (if true, uses Ending Mistake key)", "l", "the scene");
+            load_key = Config.Bind("Activation Key", "Load key", "l", "This is the key that will let you load into the Gun Explosion Scene");
         }
         internal void Update()
         {
